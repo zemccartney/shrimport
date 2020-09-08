@@ -1,6 +1,6 @@
 {
   "name": "shrimport",
-  "version": "1.0.0-1",
+  "version": "1.0.0",
   "author": "Zack McCartney",
   "repository": "github:zemccartney/shrimport",
   "description": "🦐 📦 — Install local packages",

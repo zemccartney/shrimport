@@ -44,7 +44,7 @@ const [localPackage, dest] = argv._
 const run = async () => {
   try {
     await Main.run(localPackage, dest)
-    console.log(`🦐📦 shrimport success! 🎩🍾 local package is now installed in ${dest}!`)
+    console.log(`🦐📦 shrimport success! 🎩🍾 local package is now installed in ${dest || 'your current working directory'}!`)
     process.exit(0)
   } catch (err) {
     /* c8 ignore next */

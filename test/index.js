@@ -167,13 +167,14 @@ suite('Shrimport', () => {
     })
 
     test('installs local package into dest module\'s node_modules as if normally intstalled', { timeout: 5000 }, async () => {
+      const localPkg = `${__dirname}/fixtures/happy-path/local-a`
       const dest = `${__dirname}/fixtures/happy-path/dest`
       const result = await internals.CLI([
-        `${__dirname}/fixtures/happy-path/local-a`,
+        localPkg,
         dest
       ])
       expect(result.code).to.equal(0)
-      expect(result.output).to.equal(`🦐📦 shrimport success! 🎩🍾 local package is now installed in ${dest}!`)
+      expect(result.output).to.equal(`🦐📦 shrimport success! 🎩🍾 ${localPkg} is now installed in ${dest}!`)
     })
 
     test('prints error message on invalid input', async () => {
